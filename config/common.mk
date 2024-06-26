@@ -201,6 +201,9 @@ CUSTOM_LOCALES += \
 # Bootanimation
 include vendor/pixelage/config/bootanimation.mk
 
+# Fonts
+include vendor/pixelage/config/fonts.mk
+
 # Version
 include vendor/pixelage/config/version.mk
 
