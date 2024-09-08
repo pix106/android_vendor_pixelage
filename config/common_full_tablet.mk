@@ -1,7 +1,7 @@
-# Inherit mobile full common Lineage stuff
-$(call inherit-product, vendor/lineage/config/common_mobile_full.mk)
+# Inherit mobile full common Pixelage stuff
+$(call inherit-product, vendor/pixelage/config/common_mobile_full.mk)
 
-# Inherit tablet common Lineage stuff
-$(call inherit-product, vendor/lineage/config/tablet.mk)
+# Inherit tablet common Pixelage stuff
+$(call inherit-product, vendor/pixelage/config/tablet.mk)
 
-$(call inherit-product, vendor/lineage/config/telephony.mk)
+$(call inherit-product, vendor/pixelage/config/telephony.mk)

@@ -14,14 +14,14 @@
 # limitations under the License.
 
 # -----------------------------------------------------------------
-# Lineage OTA update package
+# Pixelage OTA update package
 
-LINEAGE_TARGET_PACKAGE := $(PRODUCT_OUT)/lineage-$(LINEAGE_VERSION).zip
+PIXELAGE_TARGET_PACKAGE := $(PRODUCT_OUT)/ProjectPixelage-$(PIXELAGE_VERSION).zip
 
 SHA256 := prebuilts/build-tools/path/$(HOST_PREBUILT_TAG)/sha256sum
 
 .PHONY: bacon
 bacon: $(DEFAULT_GOAL) $(INTERNAL_OTA_PACKAGE_TARGET)
-	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(LINEAGE_TARGET_PACKAGE)
-	$(hide) $(SHA256) $(LINEAGE_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(LINEAGE_TARGET_PACKAGE).sha256sum
-	@echo "Package Complete: $(LINEAGE_TARGET_PACKAGE)" >&2
+	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(PIXELAGE_TARGET_PACKAGE)
+	$(hide) $(SHA256) $(PIXELAGE_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(PIXELAGE_TARGET_PACKAGE).sha256sum
+	@echo "Package Complete: $(PIXELAGE_TARGET_PACKAGE)" >&2
