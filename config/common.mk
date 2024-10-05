@@ -2,7 +2,11 @@
 $(call inherit-product-if-exists, vendor/extra/product.mk)
 
 # GApps
-$(call inherit-product, vendor/gms/products/gms.mk)
+ifeq ($(WITH_GMS),true)
+  $(call inherit-product, vendor/gms/products/gms.mk)
+else
+  $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_product.mk)
+endif
 
 PRODUCT_BRAND ?= ProjectPixelage
 
